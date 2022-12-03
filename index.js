@@ -16,8 +16,7 @@ function checkSpam() {
 
     let userPic = new Image(40, 40);
     userPic.src = picture.value;
-    commentSect.append(author.value + ": " + newComm + '\n');
-    commentSect.prepend(userPic, " ");
+    commentSect.innerHTML += `<img width="40px" height="auto" src="${picture.value}"> ${author.value} : ${newComm} <br>`;
     document.getElementById('comment').value = '';
 }
 
