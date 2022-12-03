@@ -14,13 +14,11 @@ function checkSpam() {
     let spam = /viagra|xxx/gi;
     newComm = comment.replace(spam, "***");
 
-    let userPic = new Image(100, 200);
+    let userPic = new Image(40, 40);
     userPic.src = picture.value;
-
-    commentSect.append(author.value + newComm + '\n');
-    document.body.appendChild(userPic);
+    commentSect.append(author.value + ": " + newComm + '\n');
+    commentSect.prepend(userPic, " ");
     document.getElementById('comment').value = '';
-    console.log("hello!");
 }
 
 function checkMessage() {
