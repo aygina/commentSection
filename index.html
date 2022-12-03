@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="normalize" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=PT+Sans&display=swap"
+        rel="stylesheet">
+    <title>Name</title>
 </head>
+
 <body>
-    <h1>Hello world!</h1>
+    <div class="wrapper">
+        <div class="form">
+            <p>Сделайте интерфейс для анонимных комментариев со спамфильтром. Необходимо реализовать отображение и
+                добавление сообщений, а также функцию checkSpam(str), заменяющую 'viagra' или 'XXX' на ***. Функция
+                должна быть нечувствительна к регистру.</p>
+            <p>Доработать сохранение комментариев из прошлого домашнего задания через веб-хранилище, дать возможность
+                пользователю сохранять свое имя и аватарку при вводе и запоминать их.
+                https://images.app.goo.gl/zkC9zFLaFFfnA48QA
+            </p>
+            <div class="commentSection" id="commentSection"></div>
+            <div class="comment">
+                <input type="text" id="comment" placeholder="Оставьте комментарий">
+                <div class="signIn">
+                    <div class="name">
+                        <label for="author">Ваше имя*:</label>
+                        <input type="text" id="author" placeholder="Имя" required></div>
+                    <div class="picture">
+                        <label for="picture">Ваше фото:</label>
+                        <input type="text" id="picture" placeholder="Ссылка на фото">
+                    </div>
+                </div>
+                <button onclick="checkSpam();">Отправить</button>
+
+            </div>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
+
 </html>

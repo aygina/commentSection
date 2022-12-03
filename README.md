@@ -1,1 +1,1 @@
-# commentSection
+# censoredContent
